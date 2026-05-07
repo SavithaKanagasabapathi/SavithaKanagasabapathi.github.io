@@ -5,15 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Savitha Kanagasabapathi</title>
 
+    <!-- Stylish Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" />
+
     <style>
+        :root {
+            --bg: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+            --card: #1f1f1f;
+            --text: #e6e6e6;
+            --accent: #4da6ff;
+            --font-main: 'Poppins', sans-serif;
+            --font-alt: 'Inter', sans-serif;
+        }
+
+        body.light {
+            --bg: linear-gradient(135deg, #ffffff, #eaeaea);
+            --card: #ffffff;
+            --text: #222;
+            --accent: #0066cc;
+        }
+
         body {
             margin: 0;
             padding: 0;
-            background: #0d0d0d;
-            color: #e6e6e6;
-            font-family: "Segoe UI", Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-main);
             line-height: 1.7;
-            overflow-x: hidden;
+            transition: background 0.4s, color 0.4s;
         }
 
         header {
@@ -23,22 +48,22 @@
         }
 
         h1 {
-            font-size: 36px;
+            font-size: 40px;
             margin-bottom: 10px;
-            color: #ffffff;
+            font-weight: 600;
         }
 
         h2 {
-            font-size: 22px;
+            font-size: 24px;
             margin-top: 50px;
             border-bottom: 1px solid #333;
             padding-bottom: 8px;
-            color: #ffffff;
+            font-weight: 600;
         }
 
         p {
             font-size: 16px;
-            color: #cccccc;
+            font-family: var(--font-alt);
         }
 
         section {
@@ -59,6 +84,40 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+        /* Social Icons */
+        .icons a {
+            margin: 0 12px;
+            font-size: 28px;
+            color: var(--accent);
+            transition: 0.3s;
+        }
+
+        .icons a:hover {
+            color: #80c1ff;
+            transform: scale(1.2);
+            text-shadow: 0 0 12px var(--accent);
+        }
+
+        /* Theme Toggle Button */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--card);
+            border: 1px solid #444;
+            padding: 10px 14px;
+            border-radius: 50%;
+            cursor: pointer;
+            color: var(--accent);
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px var(--accent);
+        }
+
         /* Project Cards Grid */
         .card-grid {
             display: grid;
@@ -69,9 +128,9 @@
         }
 
         .card {
-            background: #1a1a1a;
+            background: var(--card);
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 12px;
             border: 1px solid #333;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -79,59 +138,64 @@
         .card:hover {
             transform: translateY(-8px);
             box-shadow: 0 0 20px rgba(77, 166, 255, 0.3);
-            border-color: #4da6ff;
+            border-color: var(--accent);
         }
 
         .card-title {
             font-size: 18px;
-            font-weight: bold;
-            color: #ffffff;
+            font-weight: 600;
             margin-bottom: 8px;
         }
 
         .card-tech {
             font-size: 14px;
-            color: #80c1ff;
+            color: var(--accent);
             margin-bottom: 10px;
         }
 
         .card-desc {
             font-size: 14px;
-            color: #cccccc;
+            font-family: var(--font-alt);
         }
 
         .footer {
             text-align: center;
             padding: 40px;
             font-size: 14px;
-            color: #777;
-            animation: fadeIn 1.5s ease forwards;
+            opacity: 0.7;
+            font-family: var(--font-alt);
         }
     </style>
 </head>
 
 <body>
 
+<!-- Theme Toggle Button -->
+<div class="theme-toggle" onclick="toggleTheme()">
+    <i class="fa-solid fa-circle-half-stroke"></i>
+</div>
+
 <header>
     <h1>Savitha Kanagasabapathi</h1>
-    <p>Java Backend Developer • Microservices • Spring Boot • Kafka • AI Integrations</p>
-    <p>San Jose, CA • <a href="mailto:savitha.kanagasabapathi@gmail.com">savitha.kanagasabapathi@gmail.com</a></p>
-    <p>
-        <a href="https://linkedin.com/in/Savitha-Kanagasabapathi" target="_blank">LinkedIn</a> •
-        <a href="https://github.com/SavithaKanagasabapathi" target="_blank">GitHub</a>
-    </p>
+    <p>Software Developer</p>
+
+    <div class="icons">
+        <a href="mailto:savitha.kanagasabapathi@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://github.com/SavithaKanagasabapathi" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/Savitha-Kanagasabapathi" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
 </header>
 
 <section>
     <h2>About Me</h2>
     <p>
         I’m a Java Backend Developer with 4+ years of experience building scalable microservices,
-        distributed systems, and AI‑powered backend features. I focus on clean architecture,
-        performance‑driven design, and modern Java ecosystems.
+        distributed systems, and AI‑powered backend features. 
+        I focus on clean architecture, performance‑driven design, and modern Java ecosystems.
     </p>
 
     <h2>Skills</h2>
-    <p>Java, Python, Spring Boot, Microservices, REST, GraphQL, Kafka, MongoDB, MySQL, AWS, Docker, Kubernetes, Jenkins, LangChain, Ollama, TensorFlow</p>
+    <p>Java, Python, Spring Boot, Microservices, REST, GraphQL, Kafka, MongoDB, MySQL, Oracle, AWS, Docker, Kubernetes, Jenkins, LangChain, Ollama, TensorFlow</p>
 
     <h2>Projects</h2>
 
@@ -146,7 +210,7 @@
         <div class="card">
             <div class="card-title">GameHub – React Gaming Platform</div>
             <div class="card-tech">ReactJS • Firebase</div>
-            <div class="card-desc">Multi‑game platform with real‑time data and Firebase authentication.</div>
+            <div class="card-desc">Multi‑game platform and Firebase authentication.</div>
         </div>
 
         <div class="card">
@@ -176,7 +240,7 @@
         <div class="card">
             <div class="card-title">Lokivas – Wedding E‑Invite</div>
             <div class="card-tech">JavaScript • Bootstrap</div>
-            <div class="card-desc">Modern, animated wedding invitation website built in 2023.</div>
+            <div class="card-desc">Modern wedding invitation website built in 2023.</div>
         </div>
 
         <div class="card">
@@ -189,8 +253,14 @@
 </section>
 
 <div class="footer">
-    © 2026 Savitha Kanagasabapathi
+    © 2026 Savitha Kanagasabapathi — This website is still in progress… just like my coffee ☕✨
 </div>
+
+<script>
+    function toggleTheme() {
+        document.body.classList.toggle("light");
+    }
+</script>
 
 </body>
 </html>
