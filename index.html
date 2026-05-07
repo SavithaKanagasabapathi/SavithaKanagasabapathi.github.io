@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Savitha Kanagasabapathi</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0d0d0d;
+            color: #e6e6e6;
+            font-family: "Segoe UI", Arial, sans-serif;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 20px 40px;
+            animation: fadeIn 1.2s ease forwards;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        h2 {
+            font-size: 22px;
+            margin-top: 50px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 8px;
+            color: #ffffff;
+        }
+
+        p {
+            font-size: 16px;
+            color: #cccccc;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Slide-up animation */
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Project Cards Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+            animation: slideUp 1s ease forwards;
+        }
+
+        .card {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #333;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 20px rgba(77, 166, 255, 0.3);
+            border-color: #4da6ff;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .card-tech {
+            font-size: 14px;
+            color: #80c1ff;
+            margin-bottom: 10px;
+        }
+
+        .card-desc {
+            font-size: 14px;
+            color: #cccccc;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 14px;
+            color: #777;
+            animation: fadeIn 1.5s ease forwards;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Savitha Kanagasabapathi</h1>
+    <p>Java Backend Developer • Microservices • Spring Boot • Kafka • AI Integrations</p>
+    <p>San Jose, CA • <a href="mailto:savitha.kanagasabapathi@gmail.com">savitha.kanagasabapathi@gmail.com</a></p>
+    <p>
+        <a href="https://linkedin.com/in/Savitha-Kanagasabapathi" target="_blank">LinkedIn</a> •
+        <a href="https://github.com/SavithaKanagasabapathi" target="_blank">GitHub</a>
+    </p>
+</header>
+
+<section>
+    <h2>About Me</h2>
+    <p>
+        I’m a Java Backend Developer with 4+ years of experience building scalable microservices,
+        distributed systems, and AI‑powered backend features. I focus on clean architecture,
+        performance‑driven design, and modern Java ecosystems.
+    </p>
+
+    <h2>Skills</h2>
+    <p>Java, Python, Spring Boot, Microservices, REST, GraphQL, Kafka, MongoDB, MySQL, AWS, Docker, Kubernetes, Jenkins, LangChain, Ollama, TensorFlow</p>
+
+    <h2>Projects</h2>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <div class="card-title">Excel Analyzer – AI Data Agent</div>
+            <div class="card-tech">Python • LangChain • Ollama</div>
+            <div class="card-desc">AI agent that analyzes Excel files and answers natural language queries.</div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">GameHub – React Gaming Platform</div>
+            <div class="card-tech">ReactJS • Firebase</div>
+            <div class="card-desc">Multi‑game platform with real‑time data and Firebase authentication.</div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Rock Paper Scissors – AI Vision Game</div>
+            <div class="card-tech">TensorFlow • Teachable Machine</div>
+            <div class="card-desc">Gesture‑recognition game using webcam input and custom ML models.</div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Homeo Camp – Healthcare Platform</div>
+            <div class="card-tech">Spring Boot • Kafka • Stripe</div>
+            <div class="card-desc">Enhanced platform with payments, email notifications, and microservices.</div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Samhitha – Symposium Website</div>
+            <div class="card-tech">JavaScript • Bootstrap</div>
+            <div class="card-desc">Responsive event website for SASTRA University’s 2019 symposium.</div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Journal_To_DayOne – Migration Tool</div>
+            <div class="card-tech">Python • OpenCV</div>
+            <div class="card-desc">Utility to migrate journal entries from Apple Journal to Day One App.</div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Lokivas – Wedding E‑Invite</div>
+            <div class="card-tech">JavaScript • Bootstrap</div>
+            <div class="card-desc">Modern, animated wedding invitation website built in 2023.</div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">IoT Smart Plug Automation</div>
+            <div class="card-tech">Python • IoT</div>
+            <div class="card-desc">Automation script to remotely control smart plug ON/OFF operations.</div>
+        </div>
+
+    </div>
+</section>
+
+<div class="footer">
+    © 2026 Savitha Kanagasabapathi
+</div>
+
+</body>
+</html>
